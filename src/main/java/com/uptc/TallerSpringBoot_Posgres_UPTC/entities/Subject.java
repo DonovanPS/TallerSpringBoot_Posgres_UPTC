@@ -2,6 +2,8 @@ package com.uptc.TallerSpringBoot_Posgres_UPTC.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 
 @Entity
 @Table(name = "subjects")
@@ -24,6 +26,8 @@ public class Subject {
     @JoinColumn(name = "school_id", referencedColumnName = "id")
     private School school;
 
+    @ManyToMany(mappedBy = "subjects")
+    private List<Student> students;
 
     public Subject() {
     }

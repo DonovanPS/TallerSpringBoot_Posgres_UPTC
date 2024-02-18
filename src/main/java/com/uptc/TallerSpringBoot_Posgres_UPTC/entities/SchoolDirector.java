@@ -1,5 +1,6 @@
 package com.uptc.TallerSpringBoot_Posgres_UPTC.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -24,6 +25,7 @@ public class SchoolDirector implements Serializable {
 
     @OneToOne
     @JoinColumn(name = "school_id", referencedColumnName = "id")
+
     private School school;
 
 

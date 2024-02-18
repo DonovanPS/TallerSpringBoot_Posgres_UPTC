@@ -1,8 +1,10 @@
 package com.uptc.TallerSpringBoot_Posgres_UPTC.controller;
 
+import com.uptc.TallerSpringBoot_Posgres_UPTC.entities.School;
 import com.uptc.TallerSpringBoot_Posgres_UPTC.entities.SchoolDirector;
 import com.uptc.TallerSpringBoot_Posgres_UPTC.responses.ResponseHandler;
 import com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolDirectorService;
+import com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,13 +17,13 @@ import java.util.List;
 public class SchoolDirectorController {
 
     private final SchoolDirectorService schoolDirectorService;
-
-    public SchoolDirectorController(SchoolDirectorService schoolDirectorService) {
-        this.schoolDirectorService = schoolDirectorService;
-    }
+    private final SchoolsService schoolsService;
 
     @Autowired
-
+    public SchoolDirectorController(SchoolDirectorService schoolDirectorService, SchoolsService schoolsService) {
+        this.schoolDirectorService = schoolDirectorService;
+        this.schoolsService = schoolsService;
+    }
 
     @GetMapping
     public ResponseEntity<Object> getAllSchoolDirectors() {
@@ -50,12 +52,19 @@ public class SchoolDirectorController {
         }
     }
 
-    @PostMapping
-    public ResponseEntity<Object> saveSchoolDirector(@RequestBody SchoolDirector schoolDirector) {
+    @PostMapping("/{idSchool}")
+    public ResponseEntity<Object> saveSchoolDirector(@RequestBody SchoolDirector schoolDirector, @PathVariable Integer idSchool) {
         try {
-            return ResponseHandler.generateResponse("School director saved", HttpStatus.OK, schoolDirectorService.saveSchoolDirector(schoolDirector));
+            School school = schoolsService.getSchoolById(idSchool);
+
+            if (school != null) {
+                schoolDirector.setSchool(school);
+                return ResponseHandler.generateResponse("School director saved", HttpStatus.OK, schoolDirectorService.saveSchoolDirector(schoolDirector));
+            }
+            return ResponseHandler.generateResponse("School not found", HttpStatus.NOT_FOUND, null);
         } catch (Exception e) {
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR, null);
         }
     }
+
 }
