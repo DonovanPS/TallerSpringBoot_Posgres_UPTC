@@ -14,6 +14,28 @@ Este proyecto es una aplicación de ejemplo desarrollada con Spring Boot que uti
 2. Navega hasta el directorio del proyecto: `cd TallerSpringBoot_Posgres_UPTC`
 3. Ejecuta la aplicación: `mvn spring-boot:run`
 4. Ruta en local sera: `http://localhost:3000/`
+5. Ruta de la aplicacion en la nube: `https://tallerspringboot-posgres-uptc.onrender.com/docs`
+
+<span style="text-decoration: underline;">_Nota:_ En el despliegue en Render, al utilizar el plan gratuito, surge el inconveniente de que el servidor se apaga después de un período de inactividad. Por lo tanto, puede ser necesario esperar unos momentos después de acceder al enlace para que el servidor se reinicie.</span>
+
+
+## Base de datos
+La base de datos utilizada en este proyecto es PostgreSQL. La configuración de la base de datos se encuentra en el archivo `application.properties`. La base de datos se encuentra alojada en supabase.
+
+### Diagrama entidad-relación sin normalizar
+[![Diagrama-Data-Base-Sin-Normalizar.png](https://i.postimg.cc/NM5GcgH4/Diagrama-Data-Base-Sin-Normalizar.png)](https://postimg.cc/jwYY6Yvw)
+
+### Diagrama entidad-relación normalizado
+[![Diagrama-Data-Base-Normalizado.png](https://i.postimg.cc/0jZqMFDQ/Diagrama-Data-Base-Normalizado.png)](https://postimg.cc/sGBLbnnd)
+
+## Diagrama de clases
+[![Diagrama-de-clases.png](https://i.postimg.cc/CK0JX193/Diagrama-de-clases.png)](https://postimg.cc/qNm8CkJw)
+
+## Diagrama de componentes
+[![Diagrama-Componentes.png](https://i.postimg.cc/Zqf7NmDX/Diagrama-Componentes.png)](https://postimg.cc/Y4Wzc57x)
+
+## Diagrama de despliegue
+[![Diagrama-Despliegue.png](https://i.postimg.cc/L6dyLNN4/Diagrama-Despliegue.png)](https://postimg.cc/t75tHdK8)
 
 ## Documentación de los Endpoints
 
@@ -165,7 +187,7 @@ Ejemplo de solicitud: PUT /subjects/1
 {
   "name": "Fisica",
   "description": "Escuela de fisica",
-  "credits": 0
+  "credits": 3
 }
 ```
 
