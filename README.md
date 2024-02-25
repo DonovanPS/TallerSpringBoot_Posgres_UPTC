@@ -243,5 +243,3 @@ Ejemplo de solicitud: DELETE /school-director/1
 
 
 
-![Texto alternativo](https://github.com/DonovanPS/TallerSpringBoot_Posgres_UPTC.git/src/main/resources/Diagrama de clases.png)
-
