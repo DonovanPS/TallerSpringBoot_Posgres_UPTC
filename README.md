@@ -218,3 +218,8 @@ Ejemplo de solicitud: PUT /school-director/1
 #### DELETE /school-director/{id}
 Elimina un director de escuela por su ID.
 Ejemplo de solicitud: DELETE /school-director/1
+
+
+
+![Texto alternativo](https://github.com/DonovanPS/TallerSpringBoot_Posgres_UPTC.git/src/main/resources/Diagrama de clases.png)
+
