@@ -8,5 +8,5 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17-alpine
 COPY --from=build /target/TallerSpringBoot_Posgres_UPTC.jar taller-electiva.jar
 # ENV PORT=8080
-EXPOSE 3000:8080
+EXPOSE 8080
 ENTRYPOINT ["java","-jar","taller-electiva.jar"]
