@@ -1,5 +1,6 @@
 package com.uptc.TallerSpringBoot_Posgres_UPTC.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -27,21 +28,25 @@ public class School implements Serializable {
 
     @OneToOne(mappedBy = "school")
     @JoinColumn(name = "schoolDirector", referencedColumnName = "school_id")
+    @JsonIgnore
     private SchoolDirector schoolDirector;
 
 
     @OneToMany(mappedBy = "school")
+    @JsonIgnore
     private List<Subject> subjects;
 
     public School() {
     }
 
-    public School(Integer id, String name, String address, String email, String description ) {
+    public School(Integer id, String name, String address, String email, String description, SchoolDirector schoolDirector, List<Subject> subjects) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.email = email;
         this.description = description;
+        this.schoolDirector = schoolDirector;
+        this.subjects = subjects;
     }
 
     public Integer getId() {
@@ -84,5 +89,19 @@ public class School implements Serializable {
         this.description = description;
     }
 
+    public SchoolDirector getSchoolDirector() {
+        return schoolDirector;
+    }
 
+    public void setSchoolDirector(SchoolDirector schoolDirector) {
+        this.schoolDirector = schoolDirector;
+    }
+
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
+    }
 }

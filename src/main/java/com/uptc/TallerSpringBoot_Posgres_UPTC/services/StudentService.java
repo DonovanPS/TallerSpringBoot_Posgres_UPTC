@@ -1,6 +1,7 @@
 package com.uptc.TallerSpringBoot_Posgres_UPTC.services;
 
 import com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Student;
+import com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Subject;
 import com.uptc.TallerSpringBoot_Posgres_UPTC.repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,8 +26,13 @@ public class StudentService {
         return studentRepository.findById(id).orElse(null);
     }
 
-    public Student saveStudent(Student student){
+    public Student saveStudent(Student student, List<Subject> subjects) {
+        student.setSubjects(subjects);
         return studentRepository.save(student);
+    }
+
+    public void deleteStudent(Integer id){
+        studentRepository.deleteById(id);
     }
 
 

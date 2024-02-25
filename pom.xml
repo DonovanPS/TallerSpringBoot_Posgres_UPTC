@@ -54,6 +54,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>TallerSpringBoot_Posgres_UPTC</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

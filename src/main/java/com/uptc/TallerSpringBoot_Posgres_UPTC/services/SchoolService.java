@@ -9,13 +9,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class SchoolsService {
+public class SchoolService {
 
 
     private final SchoolsRepository schoolsRepository;
 
     @Autowired
-    public SchoolsService(SchoolsRepository schoolsRepository) {
+    public SchoolService(SchoolsRepository schoolsRepository) {
         this.schoolsRepository = schoolsRepository;
     }
 
@@ -34,5 +34,7 @@ public class SchoolsService {
     }
 
 
-
+    public void deleteSchool(School school) {
+        schoolsRepository.delete(school);
+    }
 }

@@ -79,4 +79,12 @@ public class Subject {
     public void setSchool(School school) {
         this.school = school;
     }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
 }

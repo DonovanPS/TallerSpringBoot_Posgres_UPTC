@@ -1,8 +1,10 @@
 package com.uptc.TallerSpringBoot_Posgres_UPTC.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -20,7 +22,7 @@ public class Student implements Serializable {
     private String lastName;
 
     @Column(name = "bitrhDate")
-    private String birthDate;
+    private LocalDate birthDate;
 
     @Column(name = "email")
     private String email;
@@ -34,12 +36,13 @@ public class Student implements Serializable {
             joinColumns = @JoinColumn(name = "student_id"),
             inverseJoinColumns = @JoinColumn(name = "subject_id")
     )
+    @JsonIgnore
     private List<Subject> subjects;
 
     public Student() {
     }
 
-    public Student(Integer id, String name, String lastName, String birthDate, String email, String phone, List<Subject> subjects) {
+    public Student(Integer id, String name, String lastName, LocalDate birthDate, String email, String phone, List<Subject> subjects) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -73,11 +76,11 @@ public class Student implements Serializable {
         this.lastName = lastName;
     }
 
-    public String getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 

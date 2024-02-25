@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>E:/U/9/Electiva Web/Taller_Spring_Boot/TallerSpringBoot_Posgres_UPTC/src/main/java/com/uptc/TallerSpringBoot_Posgres_UPTC</OriginalElement>
+  <nodes>
+    <node x="772.8175732577259" y="-427.04754902748067">com.uptc.TallerSpringBoot_Posgres_UPTC.entities.School</node>
+    <node x="462.74701448044345" y="208.97606764781483">com.uptc.TallerSpringBoot_Posgres_UPTC.repositories.SchoolsRepository</node>
+    <node x="1330.386065180578" y="49.44925486546501">com.uptc.TallerSpringBoot_Posgres_UPTC.controller.SchoolsController</node>
+    <node x="462.74701448044345" y="439.4846768447993">com.uptc.TallerSpringBoot_Posgres_UPTC.repositories.StudentRepository</node>
+    <node x="1335.4287376594452" y="618.3347174011966">com.uptc.TallerSpringBoot_Posgres_UPTC.controller.SubjectController</node>
+    <node x="462.74701448044345" y="669.9932860417838">com.uptc.TallerSpringBoot_Posgres_UPTC.repositories.SubjectRepository</node>
+    <node x="801.317573257726" y="381.9846768447993">com.uptc.TallerSpringBoot_Posgres_UPTC.services.StudentService</node>
+    <node x="797.8175732577259" y="820.4068097365654">com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolDirectorService</node>
+    <node x="1354.5954999277142" y="-427.04754902748067">com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Subject</node>
+    <node x="399.24908133487395" y="877.9068097365654">com.uptc.TallerSpringBoot_Posgres_UPTC.repositories.SchoolDirectorReposotory</node>
+    <node x="1288.386065180578" y="951.9558714009647">com.uptc.TallerSpringBoot_Posgres_UPTC.controller.SchoolDirectorController</node>
+    <node x="828.8175732577262" y="162.77361039891628">com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolService</node>
+    <node x="801.317573257726" y="601.1957432906823">com.uptc.TallerSpringBoot_Posgres_UPTC.services.SubjectService</node>
+    <node x="184.0396465877377" y="-371.69042043146607">com.uptc.TallerSpringBoot_Posgres_UPTC.entities.SchoolDirector</node>
+    <node x="1876.429942184649" y="-427.04754902748067">com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Student</node>
+    <node x="1283.7520445520042" y="331.50417880085854">com.uptc.TallerSpringBoot_Posgres_UPTC.controller.StudentController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.controller.StudentController" target="com.uptc.TallerSpringBoot_Posgres_UPTC.services.SubjectService" relationship="TO_ONE">
+      <point x="-207.46463172059975" y="67.1557433781287" />
+      <point x="1285.7874128314045" y="525.985214007781" />
+      <point x="1190.0372182788753" y="525.985214007781" />
+      <point x="1190.0372182788753" y="635.6451361867705" />
+      <point x="1110.80700389105" y="635.6451361867705" />
+      <point x="154.489430633324" y="-46.31247480819343" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.School" target="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Subject" relationship="TO_MANY">
+      <point x="160.75725818195963" y="97.29337688740225" />
+      <point x="1241.2599146991645" y="-136.75417214007842" />
+      <point x="1241.2599146991645" y="-165.47811284046765" />
+      <point x="1352.2591744267907" y="-165.47811284046765" />
+      <point x="1352.2591744267907" y="-165.4781128404676" />
+      <point x="1364.2250090571406" y="-165.4781128404676" />
+      <point x="-137.87049087057358" y="153.25258599246" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.services.StudentService" target="com.uptc.TallerSpringBoot_Posgres_UPTC.repositories.StudentRepository" relationship="TO_ONE">
+      <point x="-142.5" y="0.0" />
+      <point x="86.0" y="0.0" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolService" target="com.uptc.TallerSpringBoot_Posgres_UPTC.repositories.SchoolsRepository" relationship="TO_ONE">
+      <point x="-115.0" y="-14.02659288753739" />
+      <point x="548.7470144804435" y="220.74701751137889" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Subject" target="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.School" relationship="TO_ONE">
+      <point x="-140.49928464489267" y="-4.403764202091963" />
+      <point x="1223.5047755941055" y="-260.45131322957263" />
+      <point x="1223.5047755941055" y="-329.432636186771" />
+      <point x="171.3163852157569" y="-95.38508715929032" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolDirectorService" target="com.uptc.TallerSpringBoot_Posgres_UPTC.repositories.SchoolDirectorReposotory" relationship="TO_ONE">
+      <point x="0.0" y="72.0" />
+      <point x="956.3175732577259" y="897.3487552618571" />
+      <point x="581.340104869771" y="897.3487552618571" />
+      <point x="581.340104869771" y="892.4068097365654" />
+      <point x="-112.49999999999999" y="0.0" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.services.SubjectService" target="com.uptc.TallerSpringBoot_Posgres_UPTC.repositories.SubjectRepository" relationship="TO_ONE">
+      <point x="-151.61572500870034" y="10.767291728771283" />
+      <point x="86.13980458570325" y="-0.5302510223301624" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.controller.SubjectController" target="com.uptc.TallerSpringBoot_Posgres_UPTC.services.SubjectService" relationship="TO_ONE">
+      <point x="-172.43017984746302" y="79.60536041981345" />
+      <point x="1193.4394262600597" y="802.94007782101" />
+      <point x="1193.4394262600597" y="707.189883268481" />
+      <point x="157.6435162364362" y="33.99413997779868" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.controller.SubjectController" target="com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolService" relationship="TO_ONE">
+      <point x="-174.4996078630245" y="-2.4482946639636793E-4" />
+      <point x="1647.3947205402337" y="723.3344725717302" />
+      <point x="1647.3947205402337" y="709.1778577857381" />
+      <point x="1840.9595330739298" y="709.1778577857381" />
+      <point x="1840.9595330739298" y="284.03579766536893" />
+      <point x="114.19643452437447" y="49.262187266452656" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.SchoolDirector" target="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.School" relationship="TO_ONE">
+      <point x="173.2869188896368" y="11.658562454811658" />
+      <point x="531.8265654773745" y="-277.4139591439695" />
+      <point x="670.6246199520828" y="-277.4139591439695" />
+      <point x="670.6246199520828" y="-319.13691634241303" />
+      <point x="-178.27816731342568" y="-85.08936731493236" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.School" target="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.SchoolDirector" relationship="TO_ONE">
+      <point x="-171.0" y="11.357128596014604" />
+      <point x="651.8072833753323" y="-222.69042043146607" />
+      <point x="651.8072833753323" y="-131.7548151750981" />
+      <point x="152.69547920092077" y="90.93560525636798" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.controller.SchoolDirectorController" target="com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolService" relationship="TO_ONE">
+      <point x="213.4995312030892" y="2.2198424746022738E-4" />
+      <point x="1979.9517509727625" y="1034.9560933852122" />
+      <point x="1979.9517509727625" y="232.55719844357913" />
+      <point x="116.60577304577453" y="-2.2164119553371506" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.controller.SchoolDirectorController" target="com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolDirectorService" relationship="TO_ONE">
+      <point x="-211.6627256062509" y="-40.2305795721727" />
+      <point x="1290.2233395743272" y="969.1456713057354" />
+      <point x="1296.658164477051" y="969.1456713057354" />
+      <point x="1296.658164477051" y="1019.4969846348185" />
+      <point x="1202.5204564160267" y="1019.4969846348185" />
+      <point x="1202.5204564160267" y="892.4068097365654" />
+      <point x="158.5" y="0.0" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.controller.StudentController" target="com.uptc.TallerSpringBoot_Posgres_UPTC.services.StudentService" relationship="TO_ONE">
+      <point x="-209.5" y="0.0" />
+      <point x="943.817573257726" y="447.50417880085854" />
+      <point x="0.0" y="-72.0" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.controller.SchoolsController" target="com.uptc.TallerSpringBoot_Posgres_UPTC.services.SchoolService" relationship="TO_ONE">
+      <point x="-170.29320487835548" y="16.712612838814636" />
+      <point x="1201.483132675765" y="149.16186770427964" />
+      <point x="1201.483132675765" y="197.55175097276208" />
+      <point x="118.66491701464622" y="-37.2218594261542" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Subject" target="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Student" relationship="TO_MANY">
+      <point x="147.5" y="22.0" />
+      <point x="-171.5" y="0.0" />
+    </edge>
+    <edge source="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Student" target="com.uptc.TallerSpringBoot_Posgres_UPTC.entities.Subject" relationship="TO_MANY">
+      <point x="-171.49986697964778" y="166.4995159535504" />
+      <point x="1744.3373320143396" y="-67.54803307393027" />
+      <point x="1744.3373320143396" y="-181.63518599221857" />
+      <point x="1643.0452643100589" y="-181.63518599221857" />
+      <point x="140.94976438234482" y="151.19344202358837" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9712773998488304" showDependencies="true" x="1131.48754863813" y="48.499999999998636" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

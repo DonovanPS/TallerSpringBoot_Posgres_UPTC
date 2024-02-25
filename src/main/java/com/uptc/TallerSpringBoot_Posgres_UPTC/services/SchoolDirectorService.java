@@ -27,4 +27,8 @@ public class SchoolDirectorService {
     public SchoolDirector saveSchoolDirector(SchoolDirector schoolDirector){
         return schoolDirectorReposotory.save(schoolDirector);
     }
+
+    public void deleteSchoolDirector(Integer id) {
+        schoolDirectorReposotory.deleteById(id);
+    }
 }
